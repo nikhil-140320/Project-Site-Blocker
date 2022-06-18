@@ -1,5 +1,5 @@
 
-# Site-Blocker
+# Site Blocker
 
 •	Made a Chrome extension for blocking common sites and showing
  the names of blocked sites using JSON, HTML, JavaScript and CSS
