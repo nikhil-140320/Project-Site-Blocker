@@ -1,0 +1,17 @@
+body{
+    width:150px;
+    height:250px;
+    background-color: transparent;
+    display: block;
+    justify-content: center;
+    opacity: .7;
+}
+p{
+    display: block;
+    margin:auto;
+    font-size:20px;
+    color: black;
+    border-radius:6px;
+    border: 1px solid black;
+    padding: auto;
+}
