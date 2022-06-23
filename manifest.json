@@ -2,6 +2,7 @@
     "name": "Site Blocker",
     "version": "0.0.1",
     "manifest_version": 3,
+    "description": "This extension will block the sites that are included in the javascript code",
     "action":{
         "default_popup":"popup.html"
     },
