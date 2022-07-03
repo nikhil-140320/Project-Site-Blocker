@@ -1,192 +1,150 @@
 const animation = () => {
   return `<style>
-    body {
-      background: #3378cc;
-      color: #cc4233;
-      font-family: "Arial";
-      max-height: 700px;
-      overflow: hidden;
-    }
-    .c {
-      text-align: center;
-      display: block;
+  @import url('https://fonts.googleapis.com/css?family=Corben:700');
+
+  h1 {
+    font-family: 'Corben', cursive;
+    font-size: 6rem;
+    color: white;
+  }
+  
+  .hero {
+    background-image: radial-gradient(50% 176%, #253854 80%, #061922 100%);
+    min-height: 97.5vh;
+    min-width: 90vw;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+    &__content {
       position: relative;
-      width: 80%;
-      margin: 100px auto;
+      align-self: center;
+      padding: 3rem 0;
     }
-    ._404 {
-      font-size: 220px;
-      position: relative;
-      display: inline-block;
-      z-index: 2;
-      height: 250px;
-      letter-spacing: 15px;
-    }
-    ._1 {
-      text-align: center;
-      display: block;
-      position: relative;
-      letter-spacing: 12px;
-      font-size: 4em;
-      line-height: 80%;
-    }
-    .text {
-      font-size: 70px;
-      text-align: center;
-      position: relative;
-      display: inline-block;
-      margin: 19px 0px 0px 0px;
-      /* top: 256.301px; */
-      z-index: 3;
-      width: 100%;
-      line-height: 1.2em;
-      display: inline-block;
-    }
+  }
+  
+  .snow {
+    position: absolute;
+    min-width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  
+  .snow .svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #snow-top-layer {
+    will-change: transform;
+    transform: translateY(-768px);
+    animation: fall 22.5s infinite linear;
+  }
+  
+  #snow-bottom-layer {
+    will-change: transform;
+    transform: translateY(-768px);
+    animation: fall 45s infinite linear;
+  }
+  
+  @keyframes fall {
     
-   
-    .right {
-      float: right;
-      width: 60%;
-    }
-    hr:after {
-      display: inline-block;
-      position: relative;
-      top: -0.75em;
-      font-size: 2em;
-      padding: 0 0.2em;
-      background: #33cc99;
+    100% {
+      transform: translateY(0);
     }
     
-    .cloud {
-      width: 350px;
-      height: 120px;
-    
-      background: #fff;
-      background: linear-gradient(top, #fff 100%);
-      background: -webkit-linear-gradient(top, #fff 100%);
-      background: -moz-linear-gradient(top, #fff 100%);
-      background: -ms-linear-gradient(top, #fff 100%);
-      background: -o-linear-gradient(top, #fff 100%);
-    
-      border-radius: 100px;
-      -webkit-border-radius: 100px;
-      -moz-border-radius: 100px;
-    
-      position: absolute;
-      margin: 120px auto 20px;
-      z-index: -1;
-      transition: ease 1s;
-    }
-    
-    .cloud:after,
-    .cloud:before {
-      content: "";
-      position: absolute;
-      background: #fff;
-      z-index: -1;
-    }
-    
-    .cloud:after {
-      width: 100px;
-      height: 100px;
-      top: -50px;
-      left: 50px;
-    
-      border-radius: 100px;
-      -webkit-border-radius: 100px;
-      -moz-border-radius: 100px;
-    }
-    
-    .cloud:before {
-      width: 180px;
-      height: 180px;
-      top: -90px;
-      right: 50px;
-    
-      border-radius: 200px;
-      -webkit-border-radius: 200px;
-      -moz-border-radius: 200px;
-    }
-    
-    .x1 {
-      top: -50px;
-      left: 100px;
-      -webkit-transform: scale(0.3);
-      -moz-transform: scale(0.3);
-      transform: scale(0.3);
-      opacity: 0.9;
-      -webkit-animation: moveclouds 15s linear infinite;
-      -moz-animation: moveclouds 15s linear infinite;
-      -o-animation: moveclouds 15s linear infinite;
-    }
-    .x2 {
-      left: 250px;
-      bottom: -70px;
-    
-      -webkit-transform: scale(0.6);
-      -moz-transform: scale(0.6);
-      transform: scale(0.6);
-      opacity: 0.8;
-    
-      -webkit-animation: moveclouds 25s linear infinite;
-      -moz-animation: moveclouds 25s linear infinite;
-      -o-animation: moveclouds 25s linear infinite;
-    }
-    
-    .x3 {
-      left: 470px;
-      botttom: 20px;
-    
-      -webkit-transform: scale(0.75);
-      -moz-transform: scale(0.75);
-      transform: scale(0.75);
-      opacity: 0.75;
-    
-      -webkit-animation: moveclouds 18s linear infinite;
-      -moz-animation: moveclouds 18s linear infinite;
-      -o-animation: moveclouds 18s linear infinite;
-    }
-    
-    @-webkit-keyframes moveclouds {
-      0% {
-        margin-left: 1000px;
-      }
-      100% {
-        margin-left: -1000px;
-      }
-    }
-    @-moz-keyframes moveclouds {
-      0% {
-        margin-left: 1000px;
-      }
-      100% {
-        margin-left: -1000px;
-      }
-    }
-    @-o-keyframes moveclouds {
-      0% {
-        margin-left: 1000px;
-      }
-      100% {
-        margin-left: -1000px;
-      }
-    }
+  }
      </style>`;
 };
 
 const text = (pageName) => {
   return `
-     <div id="clouds">
-        <div class="cloud x1"></div>
-        <div class="cloud x2"></div>
-        <div class="cloud x3"></div>
-       
-    </div>
-    <div class='c'>
-        <div class='_404'>WAIT</div>
-        <br>
-        <div class='_1'>Dont open <b> ${pageName}</b></div><br>
-    </div>
+  <div class="hero">
+
+  <div class="snow">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1536" preserveAspectRatio="xMidYMax slice">
+      <g fill="#FFF" fill-opacity=".15" transform="translate(55 42)">
+       <g id="snow-bottom-layer">
+        <ellipse cx="6" cy="1009.5" rx="6" ry="5.5"/>
+        <ellipse cx="138" cy="1110.5" rx="6" ry="5.5"/>
+        <ellipse cx="398" cy="1055.5" rx="6" ry="5.5"/>
+        <ellipse cx="719" cy="1284.5" rx="6" ry="5.5"/>
+        <ellipse cx="760" cy="1155.5" rx="6" ry="5.5"/>
+        <ellipse cx="635" cy="1459.5" rx="6" ry="5.5"/>
+        <ellipse cx="478" cy="1335.5" rx="6" ry="5.5"/>
+        <ellipse cx="322" cy="1414.5" rx="6" ry="5.5"/>
+        <ellipse cx="247" cy="1234.5" rx="6" ry="5.5"/>
+        <ellipse cx="154" cy="1425.5" rx="6" ry="5.5"/>
+        <ellipse cx="731" cy="773.5" rx="6" ry="5.5"/>
+        <ellipse cx="599" cy="874.5" rx="6" ry="5.5"/>
+        <ellipse cx="339" cy="819.5" rx="6" ry="5.5"/>
+        <ellipse cx="239" cy="1004.5" rx="6" ry="5.5"/>
+        <ellipse cx="113" cy="863.5" rx="6" ry="5.5"/>
+        <ellipse cx="102" cy="1223.5" rx="6" ry="5.5"/>
+        <ellipse cx="395" cy="1155.5" rx="6" ry="5.5"/>
+        <ellipse cx="826" cy="943.5" rx="6" ry="5.5"/>
+        <ellipse cx="626" cy="1054.5" rx="6" ry="5.5"/>
+        <ellipse cx="887" cy="1366.5" rx="6" ry="5.5"/>
+        <ellipse cx="6" cy="241.5" rx="6" ry="5.5"/>
+        <ellipse cx="138" cy="342.5" rx="6" ry="5.5"/>
+        <ellipse cx="398" cy="287.5" rx="6" ry="5.5"/>
+        <ellipse cx="719" cy="516.5" rx="6" ry="5.5"/>
+        <ellipse cx="760" cy="387.5" rx="6" ry="5.5"/>
+        <ellipse cx="635" cy="691.5" rx="6" ry="5.5"/>
+        <ellipse cx="478" cy="567.5" rx="6" ry="5.5"/>
+        <ellipse cx="322" cy="646.5" rx="6" ry="5.5"/>
+        <ellipse cx="247" cy="466.5" rx="6" ry="5.5"/>
+        <ellipse cx="154" cy="657.5" rx="6" ry="5.5"/>
+        <ellipse cx="731" cy="5.5" rx="6" ry="5.5"/>
+        <ellipse cx="599" cy="106.5" rx="6" ry="5.5"/>
+        <ellipse cx="339" cy="51.5" rx="6" ry="5.5"/>
+        <ellipse cx="239" cy="236.5" rx="6" ry="5.5"/>
+        <ellipse cx="113" cy="95.5" rx="6" ry="5.5"/>
+        <ellipse cx="102" cy="455.5" rx="6" ry="5.5"/>
+        <ellipse cx="395" cy="387.5" rx="6" ry="5.5"/>
+        <ellipse cx="826" cy="175.5" rx="6" ry="5.5"/>
+        <ellipse cx="626" cy="286.5" rx="6" ry="5.5"/>
+        <ellipse cx="887" cy="598.5" rx="6" ry="5.5"/>
+       </g>
+      </g>
+      <g fill="#FFF" fill-opacity=".3" transform="translate(65 63)">
+       <g id="snow-top-layer">
+        <circle cx="8" cy="776" r="8"/>
+        <circle cx="189" cy="925" r="8"/>
+        <circle cx="548" cy="844" r="8"/>
+        <circle cx="685" cy="1115" r="8"/>
+        <circle cx="858" cy="909" r="8"/>
+        <circle cx="874" cy="1438" r="8" transform="rotate(180 874 1438)"/>
+        <circle cx="657" cy="1256" r="8" transform="rotate(180 657 1256)"/>
+        <circle cx="443" cy="1372" r="8" transform="rotate(180 443 1372)"/>
+        <circle cx="339" cy="1107" r="8" transform="rotate(180 339 1107)"/>
+        <circle cx="24" cy="1305" r="8" transform="rotate(180 24 1305)"/>
+        <circle cx="8" cy="8" r="8"/>
+        <circle cx="189" cy="157" r="8"/>
+        <circle cx="548" cy="76" r="8"/>
+        <circle cx="685" cy="347" r="8"/>
+        <circle cx="858" cy="141" r="8"/>
+        <circle cx="874" cy="670" r="8" transform="rotate(180 874 670)"/>
+        <circle cx="657" cy="488" r="8" transform="rotate(180 657 488)"/>
+        <circle cx="443" cy="604" r="8" transform="rotate(180 443 604)"/>
+        <circle cx="339" cy="339" r="8" transform="rotate(180 339 339)"/>
+        <circle cx="24" cy="537" r="8" transform="rotate(180 24 537)"/>
+       </g>
+      </g>
+  </svg>
+  </div>
+
+<div class="hero__content">
+  <h1>${pageName} BLOCKED</h1>
+</div>
+
+</div>
      `;
 };
 
