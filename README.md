@@ -9,4 +9,5 @@ https://user-images.githubusercontent.com/106978652/177034993-e1a06028-d942-4919
 
 ## Default Popup on click
 
-![dropdownmenu](https://user-images.githubusercontent.com/106978652/174446365-edf38ac0-e1b5-4abf-84cf-a624c3c789c6.png)
+![image](https://user-images.githubusercontent.com/106978652/177035066-d2d3cf77-b950-4abe-94cb-d9f8d940df33.png)
+
