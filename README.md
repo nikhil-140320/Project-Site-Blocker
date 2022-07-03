@@ -3,9 +3,9 @@
 
 •	Made a Chrome extension for blocking common sites and showing
  the names of blocked sites using JSON, HTML, JavaScript and CSS
-## Screenshot of Blocked Site
+## short display of Blocked Site
 
-![Screenshotyoutube](https://user-images.githubusercontent.com/106978652/174446304-54591e31-4abe-490f-96a7-297ec284f5cd.png)
+https://user-images.githubusercontent.com/106978652/177034993-e1a06028-d942-4919-a974-cb25c9760b57.mp4
 
 ## Default Popup on click
 
