@@ -107,15 +107,11 @@ switch (window.location.hostname) {
     document.head.innerHTML = animation();
     document.body.innerHTML = text("NETFLIX");
     break;
-  case "www.spotify.com":
-    document.head.innerHTML = animation();
-    document.body.innerHTML = text("SPOTIFY");
-    break;
   case "www.instagram.com":
     document.head.innerHTML = animation();
     document.body.innerHTML = text("INSTAGRAM");
     break;
-  case "www.twitter.com":
+  case "twitter.com":
     document.head.innerHTML = animation();
     document.body.innerHTML = text("TWITTER");
     break;
